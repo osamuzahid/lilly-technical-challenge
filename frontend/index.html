@@ -11,10 +11,18 @@
         Disclaimer: All medicine names and prices used in this application are fictional and do not represent any real medicine(s).
     </div>
     <header>
-        <h1>Medicine Tracker</h1>
+        <h1 id="header" >Medicine Tracker</h1>
     </header>
     <main>
-
+        <div id = "medicine-list"></div>
+        <div class = "medicine-form" id = "medicine-entry">
+            <h2 id="medicine-form-heading">Add New Medicine</h2>
+            <form id="medicine-entry-form">
+                <input type="text"  id ="medicine-name" placeholder = "Enter Medicine Name" required>
+                <input type ="number" id ="medicine-price" placeholder ="Enter Medicine Price" required>
+                <button type ="submit>">Add Medicine</button>
+            </form>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>

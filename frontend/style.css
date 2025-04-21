@@ -30,3 +30,92 @@ body {
 }
 
 /* ---- Your custom styles below ---- */
+
+#header {
+    text-align: center;
+    background-color: white;
+    font-family: "Georgia";
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#medicine-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+
+.medicine-items {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;    
+    text-align: center;
+    font-family: 'Cambria';
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.medicine-items:hover{
+    background-color:lightskyblue;
+    transform:translateY(-5px);
+    cursor: pointer;
+
+   
+}
+
+#average-price {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    font-family: 'Cambria';
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#average-price:hover{
+    background-color: rgb(69, 234, 97);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+#medicine-entry form {
+    display: flex;
+    gap: 5px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#medicine-form-heading {
+    text-align: center;
+    font-family: 'Cambria', serif;
+    background-color: white;
+    padding: 15px;
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#medicine-entry input, #medicine-entry button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+#medicine-entry button {
+    background-color: rgb(162, 219, 254);
+    color: white;
+    
+}
+
+#medicine-entry button:hover {
+    background-color: rgb(4, 43, 150);
+    transform: translateY(-3px);
+    cursor: pointer;
+}
