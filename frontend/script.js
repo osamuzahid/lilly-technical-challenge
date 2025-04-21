@@ -1,9 +1,9 @@
-fetch('http://127.0.0.1:8000/medicines') //retrieving the list of medicines to display it
+fetch('http://127.0.0.1:8000/medicines') //Retrieving the list of medicines to display it
 .then(response => response.json())
 .then(data => {console.log(data);
     if (data.medicines)
         {
-            //looping through the medicines and creating a new div for each
+            //Looping through the medicines and creating a new div for each
             var medicinesList = document.getElementById('medicine-list');
             medicinesList.innerHTML = '';
             for (var i = 0; i < data.medicines.length; i++)
@@ -21,7 +21,9 @@ fetch('http://127.0.0.1:8000/medicines') //retrieving the list of medicines to d
                 }
     
                 var price;
+                //Ensuring medicines have a valid price
                 if(medicine.price !== null && medicine.price != undefined){
+                    //Ensuring medicine prices are shown up to 2 decimal points for visual consistency
                     price = '$' + Number(medicine.price).toFixed(2);
                 }
                 else{
@@ -31,11 +33,11 @@ fetch('http://127.0.0.1:8000/medicines') //retrieving the list of medicines to d
                 medicinesList.appendChild(medicineDiv);
             }
             
-            fetch('http://127.0.0.1:8000/average-price') //retrieving the average price using the new API endpoint in the backend
+            fetch('http://127.0.0.1:8000/average-price') //Retrieving the average price using the new API endpoint in the backend
             .then(response => response.json())
             .then(data => {console.log(data);
-                //creating a new div to show the average price
-                avgPrice = Number(data).toFixed(2);
+                //Creating a new div to show the average price
+                avgPrice = Number(data).toFixed(2);//Ensuring the average price is shown up to 2 decimal points, similar to the rest of the medicine
                 var medicinesList = document.getElementById('medicine-list');
                 var averagePriceDiv = document.createElement('div');
                 averagePriceDiv.id = 'average-price';
@@ -70,6 +72,7 @@ form.addEventListener('submit', function(event) {
     }
     else
     {
+        //Using the /create endpoint in the backend to add new medicines through the HTML form
         fetch('http://127.0.0.1:8000/create', {
             method: 'POST',
             headers: {
