@@ -17,7 +17,7 @@ fetch('http://127.0.0.1:8000/medicines') //Retrieving the list of medicines to d
                     name = medicine.name;
                 }
                 else{
-                    name = "Name: Unavailable";
+                    name = "Name Unavailable";
                 }
     
                 var price;
